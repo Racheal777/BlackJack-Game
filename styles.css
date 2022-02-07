@@ -67,3 +67,20 @@ height: 40vh;
 margin: 3em auto;
 box-shadow: inset 16.52px 16.52px 28px #681C05, inset -16.52px -16.52px 28px #EC400D;
 } */
+
+
+@media screen and (max-width: 600px) {
+    .cards{
+        border-radius: 17px;
+        width: 70%;
+        margin: 2em auto;
+        height: 60vh;
+        padding: 1em;
+    }
+    
+    .text{
+        text-align: center;
+         font-size: 1.5em;
+         margin: 1em 0.5em;
+     }
+}
