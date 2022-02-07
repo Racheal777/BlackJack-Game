@@ -1,0 +1,69 @@
+
+body{
+    /* background: #aa2e09; */
+    background: #31333b;
+    /* background: #a2babd; */
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.header{
+    text-align: center;
+    color: bisque;
+    font-size: 1.5em;
+}
+.cards{
+border-radius: 17px;
+width: 50%;
+margin: 2em auto;
+height: 60vh;
+padding: 1em;
+
+background: #31333b;
+border-radius: 12%;
+box-shadow: inset 9.91px 9.91px 28px #292B31, inset -9.91px -9.91px 28px #393B45;
+
+/* -webkit-border-radius: 20px;
+border-radius: 50px;
+background: #a2babd;
+-webkit-box-shadow: 12px 12px 18px #8a9ea1, -12px -12px 24px #bad6d9;
+box-shadow: 12px 12px 18px #8a9ea1, -12px -12px 16px #b2cbce; */
+}
+
+.text{
+   text-align: center;
+    font-size: 2em;
+}
+
+.text #message-el{
+    font-weight: bold;
+    font-style: italic;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    background-color: bisque;
+    padding: 5px 10px;
+    width: 180px;
+    font-size: 0.7em;
+    margin: 0.3em auto;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #bad6d9;
+    color: rgb(13, 29, 29);
+
+}
+
+/* .car{
+    background: #aa2e09;
+border-radius: 12%;
+width: 50%;
+height: 40vh;
+margin: 3em auto;
+box-shadow: inset 16.52px 16.52px 28px #681C05, inset -16.52px -16.52px 28px #EC400D;
+} */
