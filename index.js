@@ -1,39 +1,66 @@
 
 // //Card game
 
-let firstCard = getRandoms()
-let secondCard = getRandoms()
-let cards = [firstCard, secondCard]
+// let firstCard = getRandoms()
+// let secondCard = getRandoms()
+let cards = []
 let hasBlackjack = false
 let message = ""
- message = "Do you want to pick another card ? 🙂"
-
-let sum = firstCard + secondCard 
+let isAlive = false
+let sum = 0
 
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardEl = document.getElementById("card-el")
+let playerEl = document.getElementById("player-el")
 
 
-//function to generate random numbers
+let player = {
+    name: "Rich",
+    chip: 145
+}
+
+playerEl.textContent = player.name + " " + '$' + player.chip
+//function to generate random numbers by using math.floor to display whole
+//numbers out of decimals
 
 function getRandoms() {
-    return 6
-    
+    let randoms = Math.floor(Math.random() * 13) + 1
+
+    if(randoms === 1){
+        return 11
+    }else if(randoms > 10){
+        return 10
+    }else{
+        return randoms
+    }
+        
 }
 //function to call the render game function to action
+//assigning the getrandoms function to each card
 function startGame() {
+    isAlive = true
+    let firstCard = getRandoms()
+    let secondCard = getRandoms()
+    cards = [firstCard, secondCard]
+
+    sum = firstCard + secondCard
+    // if(firstCard && secondCard){
+    //     return
+    // }
+
+    
     renderGame()
+    
 }
 
 
 //function to display cards, the sum and whether you have won or not
 function renderGame(){
     
-
     //creating a forloop to loop through the cards
     for(let i = 0; i < cards.length; i++){
-        cardEl.textContent +=  cards[i] + " "
+        cardEl.textContent +=  cards[i] + " " 
     }
 
 
@@ -47,6 +74,7 @@ function renderGame(){
     }else{
         message = "You are out of the game "
         hasBlackjack = false;
+        isAlive = false
     }
     
     
@@ -55,89 +83,47 @@ function renderGame(){
 
 
 //function to draw new card
+//calling a function in another function
 
 function newCard() {
-    let card = getRandoms()
-    sum += card
+    if(isAlive === true && hasBlackjack === false){
+       
+        let card = getRandoms()
+        sum += card
+    
+        //adding the value of the card to the cards
+       
+        cards.push(card)
+        // cards[cards.length-1]
+         renderGame() 
+         console.log(cards)
+         console.log(card) 
+    }
+    
+     
 
-    //adding the value of the card to the cards
-    cards.push(card)
-     renderGame()
+     
+    //  console.log(Addednum)
     
 }
 
 
-// let ca = [1, 3]
+let men = ["vhghcrfg", "vtgctgc", "fyfjghv", "awdsctrcf", "hiii"] 
 
-// ca.push(6)
+let moon = {
+    name: "Rich",
+    age: 28,
+    address: "juaso",
+    isStudent : true,
+    tag: ["hiiii", "helllo", "meee"],
+    hot : function heat(params) 
+    {
+        console.log('are you ready')
+        
+    }
+}
 
-// console.log(ca)
-
-// ca.pop()
-// console.log(ca)
-//for loop
-
-
-     //start            //finish  //jump
-// for (let index = 10; index < 21; index++) {
-    
-//     console.log(index)
-    
-// }
-
-// let messages = ['hello', 'hi', 'hey', 'what', 'mee', 'you']
-
-// let cardss = [7, 8, 15, 20]
-// for(let i = 0; i < message.length; i++){
-
-//     console.log(messages[i])
-// }
-
-// for(let i = 0; i < cardss.length; i++){
-
-//     console.log(cardss[i])
-// }
-
-// let sentence = ['hello', "my", "name", "is", "Racheal"]
-
-// const greet = document.getElementById("greatings-el")
-
-// for (let i = 0; i < sentence.length; i++) {
-    
-//     console.log(sentence[i])
-
-// greet.textContent += sentence[i] + " "
-
-// }
-
-// let player1 = 108;
-// let player2 = 104;
-
-// function fastPlayer() {
-//     if(player1 < player2){
-//         return player1
-//     }else if(player2 < player1){
-//         return player2
-//     }else{
-//         return player1
-//     }
-    
-// }
-
-
-// let fastTime = fastPlayer()
-// console.log(fastTime)
-
-// function totalRace() {
-//     return player1 + player2
-    
-// }
-
-// // console.log(totalRace(player1,player2))
-
-// let allTime = totalRace()
-// console.log(allTime)
-
-let numbers = Math.random() * 5
-
-console.log(numbers);
+let most = "helooooo"
+men.push(most)
+console.log(console)
+console.log(moon.hot())
